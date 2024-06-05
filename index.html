@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="opening">
+      <h1>Welcome to the Dice Game</h1>
+      <h3>Instructions:</h3>
+      <ul>
+        <li>
+          In your turn, roll the dice (at least once) and accumulate the result
+          in "current".
+        </li>
+        <li>
+          You can roll again or click "hold" to save the points from "current"
+          and end the turn.
+        </li>
+        <li>
+          Note! If you get double 6, you will lose all progress from "current"
+          and the turn will go to your opponent.
+        </li>
+        <li>
+          If you manage to get to exactly the target score, you win. Otherwise,
+          if you pass it, your opponent wins.
+        </li>
+      </ul>
+      <label for="points">Enter the Points Goal:</label>
+      <input type="number" id="points" min="1" step="1" value="10" /><br />
+      <button id="start-game">Start Game</button>
+    </div>
+
+    <div id="game-screen" style="display: none">
+      <div class="playerBoxes">
+        <div class="playerOne">
+          <h2>Player 1</h2>
+          <p>Score: <span id="player1-score">0</span></p>
+        </div>
+        <div class="controls">
+          <button id="roll-dice">Roll Dice</button>
+          <button id="hold">Hold</button>
+        </div>
+        <div class="playerTwo">
+          <h2>Player 2</h2>
+          <p>Score: <span id="player2-score">0</span></p>
+        </div>
+      </div>
+      <div id="dice-images">
+        <img id="dice1" class="dice" src="assets/dice-2.png" alt="Dice 1" />
+        <img id="dice2" class="dice" src="assets/dice-5.png" alt="Dice 2" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
